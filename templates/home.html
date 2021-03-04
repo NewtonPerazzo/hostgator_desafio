@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="conteudo">
+    <p style="margin-top: 8px; font-size: 20px">Insira o link com o <b>https://</b> para uma pesquisa otimizada. 😉</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <a href="{% url 'verDominio' %}">
+                <input type="submit" value="Ver domínio" class="botao">
+            </a>
+    </form>
+    </div>
+
+
+
+{% endblock %}

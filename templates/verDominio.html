@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div class="conteudo">
+    <p style="margin-top: 8px; font-size: 20px">Resultado da busca: </p>
+        <li>
+            Dominio: {{ dominio }}
+        </li>
+        {% if available != None %}
+            <li>
+                Available: {{ available }}
+            </li>
+        {% endif %}
+        {% if price != None %}
+            <li>
+                Price: {{ price }}
+            </li>
+        {% endif %}
+        {% if reason != None %}
+            <li>
+                Reason: {{ reason }}
+            </li>
+        {% endif %}
+        <p>{{ mensagem }}</p>
+    </div>
+{% endblock %}
